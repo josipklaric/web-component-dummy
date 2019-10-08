@@ -26,5 +26,14 @@
         Some text inside web component
     </first-comp>
     <div>Line of text below web component</div>
+
+    <script>
+        class FirstComponent extends HTMLElement {
+            constructor() {
+                super();
+                console.log("FirstComponent created");
+            }
+        }
+    </script>
 </body>
 </html>
