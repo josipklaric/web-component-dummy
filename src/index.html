@@ -44,9 +44,17 @@
 
             connectedCallback() {
                 console.log('Connected callback');
+                this.shadowRoot.addEventListener('click', () => {
+                    console.log('Clicked!');
+                    const event = new CustomEvent('firstCompClick', {
+                        detail: { 'data': 'First comp click at ' + new Date().toISOString() }
+                    });
+                    this.dispatchEvent(event);
+                });
             }
         }
         window.customElements.define('first-comp', FirstComponent);
+        document.querySelector('first-comp').addEventListener('firstCompClick', (e) => console.log(e.detail.data));
     </script>
 </body>
 </html>
