@@ -41,6 +41,10 @@
                     <div>I am div element inside shadowRoot</div>
                 `;
             }
+
+            connectedCallback() {
+                console.log('Connected callback');
+            }
         }
         window.customElements.define('first-comp', FirstComponent);
     </script>
