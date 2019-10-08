@@ -32,8 +32,10 @@
             constructor() {
                 super();
                 console.log("FirstComponent created");
+                this.innerHTML += '<div>I am div element inside defined component</div>';
             }
         }
+        window.customElements.define('first-comp', FirstComponent);
     </script>
 </body>
 </html>
