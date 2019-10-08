@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Component demo</title>
+
+    <style>
+        * { padding: 5px; margin: 10px; }
+        body { margin: 10px; padding: 1em; background-color: white; color:gray; height: 500px; font-family:Arial, Helvetica, sans-serif; }
+        .container { box-shadow: 0 0 5px 5px rgba(0,0,0,0.25); padding: 1em; }
+        .box { box-shadow: 0 0 3px 3px rgba(0,0,0,0.2); padding: 5px; background-color: #1EAAFC; background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%); color: #fff; border-radius: 5px; border: 3px solid #171717; }
+        div { color:magenta; font-weight: bold; border: gray solid 1px; }
+        span { border:green dotted 1px; }
+        first-comp { background-color:blue; }
+        first-comp:not(:defined) { opacity: 0.2; }
+        first-comp:defined { display: block; }
+    </style>
+    
 </head>
 <body>
     
