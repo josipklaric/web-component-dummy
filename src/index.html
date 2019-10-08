@@ -34,7 +34,12 @@
                 console.log("FirstComponent created");
                 this.innerHTML += '<div>I am div element inside defined component</div>';
                 this.attachShadow({'mode': 'open'});
-                this.shadowRoot.innerHTML = `<div>I am div element inside shadowRoot</div>`;
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        div { color:lime; height:50px; border:solid 2px lime; padding: 10px;}
+                    </style>
+                    <div>I am div element inside shadowRoot</div>
+                `;
             }
         }
         window.customElements.define('first-comp', FirstComponent);
