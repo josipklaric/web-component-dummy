@@ -24,6 +24,7 @@
     <span>Some line above web component</span>
     <first-comp>
         Some text inside web component
+        <img src="logo.svg"/>
     </first-comp>
     <div>Line of text below web component</div>
 
@@ -39,6 +40,7 @@
                         div { color:lime; height:50px; border:solid 2px lime; padding: 10px;}
                     </style>
                     <div>I am div element inside shadowRoot</div>
+                    <slot></slot>
                 `;
             }
 
